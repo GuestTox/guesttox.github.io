@@ -9,13 +9,31 @@ body {
 }
 
 .topbar {
-    background-image: -webkit-linear-gradient(0deg, rgb(0, 100, 150), rgb(0, 0, 50));
+    padding: 15px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+    display: flex;
+    justify-content: space-between;
     backdrop-filter: blur(10px);
     list-style: none;
 }
 
-.topbar {
-    padding: 15px;
+.socials {
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.topbar a {
+    padding-left: 25px;
+    padding-right: 25px;
+    color: purple;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.pages {
     font-family: "Inter", sans-serif;
     font-size: 20;
     display: flex;
@@ -28,8 +46,12 @@ body {
     transition: all 500ms ease;
 }
 
-.topbar img:hover {
+.socials img:hover {
     transform: scale(1.2);
+}
+
+.pages a:hover {
+    color: rebeccapurple;
 }
 
 #logo {
@@ -163,3 +185,12 @@ body {
     position: relative;
     bottom: 0; right: 0; left: 0;
 }
+
+.about {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#project-desc {color: white; text-decoration: none; transition: all 500ms ease;}
+#project-desc:hover {color: lime; text-decoration: none;}
