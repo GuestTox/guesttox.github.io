@@ -13,7 +13,8 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 20;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     backdrop-filter: blur(10px);
     list-style: none;
 }
@@ -33,25 +34,14 @@ body {
     transition: all 500ms ease;
 }
 
-.pages {
-    font-family: "Inter", sans-serif;
-    font-size: 20;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .topbar img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     transition: all 500ms ease;
 }
 
 .socials img:hover {
-    transform: scale(1.2);
-}
-
-.pages a:hover {
-    color: rebeccapurple;
+    transform: scale(1.25);
 }
 
 #logo {
@@ -73,25 +63,36 @@ body {
 .profile h4 {font-weight: 900;}
 
 #guesttoxprofilespan {
+    width: min-content; height: min-content;
     font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
     background: -webkit-linear-gradient(0deg, rgb(0, 255, 255), rgb(0, 0, 250));
     background-size: 200% auto;
     background-clip: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: right center;
-    transition: all 0.5s ease;
     box-sizing: border-box;
+    transition: all 500ms ease;
 }
 
 #guesttoxprofilespan:hover {
     background-position: left center;
-    transition: all 500ms ease;
+    transform: scale(1.25);
 }
 
-#alspan {font-weight: 900; color: lime;}
-#gerspan {font-weight: 900; background: -webkit-linear-gradient(0deg, lime, red, white);background-clip: none; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-#iaspan {font-weight: 900; color: white;}
+#algeriaspan {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg");
+    background-size: 150%;
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center center;
+    text-decoration: none;
+}
+
+.profile a {text-decoration: none;}
 
 .torso {display: flex; flex-direction: column;}
 
@@ -186,11 +187,23 @@ body {
     bottom: 0; right: 0; left: 0;
 }
 
-.about {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+.project-description {
+    color: rgb(0, 200, 0);
+    transition: all 500ms ease;
 }
 
-#project-desc {color: white; text-decoration: none; transition: all 500ms ease;}
-#project-desc:hover {color: lime; text-decoration: none;}
+.project-description:hover {
+    color: rgb(0, 255, 0);
+}
+
+.project-language-name {
+    color: aqua;
+    transition: all 500ms ease;
+}
+
+.project-language-name:hover {
+    color: blueviolet;
+}
+
+#project-desc {color:white; text-decoration: none; transition: all 500ms ease;}
+#project-desc:hover {color: rebeccapurple; text-decoration: none; transition: all 500ms ease;}
