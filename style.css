@@ -1,209 +1,215 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
-
 body {
-    background: -webkit-linear-gradient(0deg, rgb(0, 100, 150), rgb(0, 0, 50));
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    position: relative;
+    max-width: 1000px; min-width: 0; margin: auto; margin-top: 75px;
+    background-color: rgb(10, 12, 20);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans- serif;
+    color: rgb(219, 219, 219);
 }
 
-.topbar {
-    padding: 15px;
-    font-family: "Inter", sans-serif;
-    font-size: 20;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    backdrop-filter: blur(10px);
-    list-style: none;
-}
-
-.socials {
-    font-family: "Inter", sans-serif;
-    font-size: 20;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.topbar a {
-    padding-left: 25px;
-    padding-right: 25px;
-    color: purple;
-    text-decoration: none;
-    transition: all 500ms ease;
-}
-
-.topbar img {
-    width: 60px;
-    height: 60px;
-    transition: all 500ms ease;
-}
-
-.socials img:hover {
-    transform: scale(1.25);
-}
-
-#logo {
-    width: 250px;
-    margin: auto;
-}
-
-.profile {
-    text-align: center;
-    padding-top: 25px;
-    color: rgb(0, 255, 100);
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-    list-style: none;
-    font-family: 'Inter', sans-serif;
-}
-
-.profile h4 {font-weight: 900;}
-
-#guesttoxprofilespan {
-    width: min-content; height: min-content;
-    font-size: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    background: -webkit-linear-gradient(0deg, rgb(0, 255, 255), rgb(0, 0, 250));
-    background-size: 200% auto;
-    background-clip: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: right center;
-    box-sizing: border-box;
-    transition: all 500ms ease;
-}
-
-#guesttoxprofilespan:hover {
-    background-position: left center;
-    transform: scale(1.25);
-}
-
-#algeriaspan {
-    background: url("https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg");
-    background-size: 150%;
-    background-clip: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: center center;
-    text-decoration: none;
-}
-
-.profile a {text-decoration: none;}
-
-.torso {display: flex; flex-direction: column;}
-
-.langs {
+header {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
-    list-style: none;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+;
 }
 
-.langs {border: 2.5px solid black; border-radius: 15px; margin: auto;}
+header img {
+    min-width: 75px; min-height: 75px;
+    max-width: 75px; max-height: 75px;
+}
 
-.langs img {
+header div {
+    display: flex;
+    flex-direction: row;
+}
+
+header a {
+    margin: auto 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 300ms ease-in-out;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+header a:hover {
+    /* color: rgb(10, 12, 20); */
+    padding: 2px;
+    background-color: #2B3355;
+    border: 5px solid #2B3355;
+}
+
+/*                                          */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.introDiv {
     padding: 15px;
-    width: 50px;
-    height: 50px;
-    transition: all 500ms ease;
-}
-
-.langs img:hover {
-    transform: scale(1.3);
-}
-
-.lang-wrapper {
+    margin: 15px;
+    background-color: #111421;
+    box-shadow: inset 0px 0px 10px rgb(10, 12, 20);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
-.lang-wrapper h4 {
-    font-size: x-large;
-    font-weight: 750;
-    background: -webkit-linear-gradient(0deg, rgb(0, 255, 255), rgb(0, 0, 250));
-    background-size: 200% auto;
-    background-clip: none;
+.introDiv h1 {
+    font-size: 50px;
+    background: linear-gradient(0deg,rgba(135, 42, 185, 1) 0%, rgba(0, 47, 255, 1) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: right center;
+    margin: 0;
+    transition: 400ms ease-in-out;
+}
+.introDiv h1:hover {
+    transform: scale(1.02);
+}
+.introDiv p {margin: 0; font-size: 20px;}
+
+
+
+
+
+#algeria {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/800px-Flag_of_Algeria.svg.png");
+    background-size: contain;
+    background-position: 0px 1px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    transition: 300ms ease-in-out;
 }
 
-.lang-wrapper h4:hover {
-    transform: scale(1.2);
-    background-position: left center;
-    transition: all 500ms ease;
-}
-
-.project-wrapper {
-    margin: auto;
-    margin-top: 100px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+/*                                          */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* spacing between items */
+    justify-items: center; /* center projects inside their grid cell */
 }
 
 .project {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 25px;
-    text-align: left;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 315px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 15px;
+    background-color: #111421;
+    box-shadow: inset 0px 0px 10px rgb(10, 12, 20);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.projectInfo {
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pInfo2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.pInfo2 a {
+    text-align: center;
+    background-color: #2B3355;
+    border: 5px solid #2B3355;
     color: white;
-    font-family: "Inter", sans-serif;
-    background-color: rgb(0, 50, 150);
-    border: 1px solid black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+    border-radius: 10px;
+    width: 95px;
+    margin: 15px 0px;
+}
+
+.pInfo2 a:hover {
+    transform: scale(1.15);
+    background-color: #2B3355;
+    border: 5px solid #2B3355;
+}
+
+
+.projectTitle {
+    font-size: 30px;
+    background: linear-gradient(0deg,rgba(135, 42, 185, 1) 0%, rgba(0, 47, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    transition: 300ms ease-in-out;
+    margin: 0 -5px;
+}
+.projectTitle:hover {
+    transform: scale(1.2);
+}
+
+.projectDesc {
+    font-size: 15px;
+    margin: 0;
+}
+.projectTech {
+    font-size: 15px;
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
+
+.projectIcon {
+    width: 100px;
+    height: 100px;
+    border: 3px solid purple;
     border-radius: 15px;
 }
 
-.project-title a {
-    color: rgb(255, 100, 0);
-    font-size: 30px;
-    text-decoration: none;
-    font-weight: 900;
-    transition: all 500ms;
-}
 
-.project-title:hover a {
-    color: rgb(0, 200, 255);
-    font-size: 30px;
-    text-decoration: underline;
-    font-weight: 900;
-}
 
-.project-title {
-    margin-bottom: 15px;
-}
 
-.bottombar {
-    background-color: rgb(0, 0, 50);
-    margin-top: 200px;
-    padding: 5px;
+/*                                          */
+
+footer {
+    margin-top: 300px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    font-size: 10px;
-    position: relative;
-    bottom: 0; right: 0; left: 0;
+    font-weight: 500;
+    font-size: medium;
+    margin-bottom: 40px;
 }
 
-.project-description {
-    color: rgb(0, 200, 0);
-    transition: all 500ms ease;
+footer div {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.project-description:hover {
-    color: rgb(0, 255, 0);
+footer a {
+    transition: 300ms ease-in-out;
 }
 
-.project-language-name {
-    color: aqua;
-    transition: all 500ms ease;
+footer a:hover {
+    transform: scale(1.3);
 }
-
-.project-language-name:hover {
-    color: blueviolet;
-}
-
-#project-desc {color:white; text-decoration: none; transition: all 500ms ease;}
-#project-desc:hover {color: rebeccapurple; text-decoration: none; transition: all 500ms ease;}
