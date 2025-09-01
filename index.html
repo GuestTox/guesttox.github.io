@@ -1,50 +1,95 @@
-<!DOCTYPE html>
 <html>
     <head>
+        <title>Sami's Gallery</title>
         <link rel="stylesheet" href="style.css">
-        <title>GuestTox</title>
-        <link rel="icon" href="logo.png">
-        <script src="index.js"></script>
     </head>
 
-    <body>
-        <div class="topbar">
-            <div class="socials">
-                <a href="https://github.com/GuestTox" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github logo"></a>
-                <a href="https://twitter.com/GuestTox" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/889/889147.png" alt="twitter logo"></a>
-                <a href="https://www.youtube.com/@guesttox" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="youtube logo"></a>
-                <a href="https://discord.gg/pMft37XkG6" target="_blank"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg" alt="discord logo"></a>
-            </div>
-        </div>
-        <div class="torso">
-            <div class="profile">
-                    <img src="logo.png" id="logo" alt="GuestTox Logo">
-                    <h4 id="guesttoxprofilespan">GuestTox</h4>
-                    <h3><script>document.write((new Date().getFullYear() - 2008));</script> year old developer from <a href="https://en.wikipedia.org/wiki/Algeria" target="_blank"><span id="algeriaspan">Algeria</span></a></h3>
-            </div>
-            <div class="lang-wrapper">
-                <div class="langs">
-                    <!-- <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="linux logo">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git logo"> -->
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="python logo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="c++ logo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="html logo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="css logo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="javascript logo">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="typescript logo">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="csharp logo">
-                </div>
-            </div>
-            <div class="project-wrapper">
-                <h1>Projects</h1>
-                <h2>Here are the projects available on my <a href="https://github.com/GuestTox" target="_blank" id="project-desc">Github</a></h2>
-                <div class="projects">
+    <script>
+        function updateTime() {
+            const monthNames =  ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-                </div>
+            let date = new Date()
+
+            let day = date.getDate(); if (day < 10) {day = "0" + day.toString()}
+            let month = monthNames[date.getMonth()]
+            let year = date.getUTCFullYear()
+            let hours = date.getUTCHours() + 1; if (hours < 10) {hours = "0" + hours.toString()}
+            let minutes = date.getMinutes(); if (minutes < 10) {minutes = "0" + minutes.toString()}
+            let seconds = date.getSeconds(); if (seconds < 10) {seconds = "0" + seconds.toString()}
+
+            document.getElementById("time").innerHTML = (day + " " + month + " " + year + " | " + hours + ":" + minutes + ":" + seconds)
+            document.getElementById("ageText").innerHTML = (date.getUTCFullYear() - 2008.939726027).toFixed()
+        }
+
+        setInterval(updateTime, 1000)
+
+        function alreadyonit() {
+
+        }
+    </script>
+
+    <body>
+        <header>
+            <div>
+                <img src="https://guesttox.github.io/logo.png" alt="GuestTox's logo">
+                <h2>'s Gallery</h2>
+            </div>
+            <div>
+                <a href="/">Home</a>
+                <a href="Contact">Contact</a>
+            </div>
+        </header>
+
+
+
+
+
+        <div class="hero">
+            <div class="introDiv">
+                <h1>Welcome to my gallery!</h1>
+                <p>I am Sami, a <span id="ageText"></span> year old developer from <a id="algeria" href="https://en.wikipedia.org/wiki/Algeria">Algeria</a>. I'm a highschool student who will pass the baccalaureat exam in 2026. I have over 2 years of experience in programming creating lots of websites, apps, games, etc along the way., I enjoy coding and learning new things.</p>
             </div>
         </div>
-        <div class="bottombar">
-            <h1>©<script>document.write((new Date().getFullYear()));</script> Songoda Technologies</h1>
+
+        <div id="gallery">
+            <h1 style="margin-left: 40px;">Gallery & Projects:</h1>
+            <div id="projects">
+                <div class="project">
+                    <div class="projectInfo">
+                        <h3 class="projectTitle">Dr. Tenni</h3>
+                        <p class="projectDesc">Dynamic website for doctor</p>
+                        <p class="projectTech">HTML & CSS + Python Flask</p>
+                    </div>
+                    <div class="pInfo2">
+                        <img class="projectIcon" src="tenni.jpg">
+                        <a target="_blank" href="https://tenni.ct.ws">Explore</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projectInfo">
+                        <h3 class="projectTitle">Sami's Gallery</h3>
+                        <p class="projectDesc">The website you're currently looking at</p>
+                        <p class="projectTech">HTML & CSS</p>
+                    </div>
+                    <div class="pInfo2">
+                        <img class="projectIcon" style="border: 0;" src="https://guesttox.github.io/logo.png">
+                        <a>Already here</a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+
+
+
+        <footer>
+            <span id="time"></span>
+            <div>
+                    <a href="https://github.com/GuestTox"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" style="width: 45px; background-color: white; border-radius: 500px;"/></a>
+                    <a href="https://www.instagram.com/guesttox"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" style="width: 45px;"/></a>
+                    <a href="https://discord.gg/pMft37XkG6"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" style="width: 45px;"/></a>
+            </div>
+        </footer>
     </body>
 </html>
